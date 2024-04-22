@@ -1,13 +1,12 @@
 import {
   HomeIcon,
-  UserCircleIcon,
-  TableCellsIcon,
   InformationCircleIcon,
-  ServerStackIcon,
-  RectangleStackIcon,
+  PlusIcon,
+  TableCellsIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
-import { SignIn, SignUp } from "@/pages/auth";
+import {Home, Notifications, Profile, Tables} from "@/pages/dashboard";
+import {AddArticle} from "@/pages/manage"
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -44,20 +43,14 @@ export const routes = [
     ],
   },
   {
-    title: "auth pages",
-    layout: "auth",
+    title: "管理工具",
+    layout: "manage",
     pages: [
       {
-        icon: <ServerStackIcon {...icon} />,
-        name: "sign in",
-        path: "/sign-in",
-        element: <SignIn />,
-      },
-      {
-        icon: <RectangleStackIcon {...icon} />,
-        name: "sign up",
-        path: "/sign-up",
-        element: <SignUp />,
+        icon: <PlusIcon {...icon}/>,
+        name: "添加",
+        path: "/add-article",
+        element: <AddArticle/>,
       },
     ],
   },
