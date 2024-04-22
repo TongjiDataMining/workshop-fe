@@ -20,21 +20,9 @@ export function Footer({ brandName, brandLink, routes }) {
           </a>{" "}
           for a better web.
         </Typography>
-        <ul className="flex items-center gap-4">
-          {routes.map(({ name, path }) => (
-            <li key={name}>
-              <Typography
-                as="a"
-                href={path}
-                target="_blank"
-                variant="small"
-                className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
-              >
-                {name}
-              </Typography>
-            </li>
-          ))}
-        </ul>
+        <div>
+          滇ICP备2023008296号-1
+        </div>
       </div>
     </footer>
   );

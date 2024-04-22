@@ -6,7 +6,7 @@ function App() {
         <Routes>
             <Route path="/dashboard/*" element={<Dashboard/>}/>
             <Route path="/manage/*" element={<Manage/>}/>
-            <Route path="*" element={<Navigate to="/dashboard/home" replace/>}/>
+            <Route path="*" element={<Navigate to="/dashboard/relationship" replace/>}/>
         </Routes>
     );
 }
