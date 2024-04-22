@@ -1,1 +1,1 @@
-export * from "@/pages/manage/AddArticle"
+export * from "@/pages/manage/add_article.jsx"
