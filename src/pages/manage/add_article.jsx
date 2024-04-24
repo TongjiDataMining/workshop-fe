@@ -9,7 +9,9 @@ export function AddArticle() {
     const handleSubmit = () => {
         fetch("/api/articles", {
             method: "POST",
-            body: JSON.stringify(content)
+            body: JSON.stringify({
+                text: content
+            })
         }).then(()=>{
             setContent("")
             setOpenSuccess(true)
