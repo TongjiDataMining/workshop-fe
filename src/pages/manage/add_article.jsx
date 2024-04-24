@@ -9,6 +9,9 @@ export function AddArticle() {
     const handleSubmit = () => {
         fetch("/api/articles", {
             method: "POST",
+            headers: {
+               "Content-Type": "application/json;charset=UTF-8"
+            },
             body: JSON.stringify({
                 text: content
             })
