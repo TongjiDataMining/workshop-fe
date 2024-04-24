@@ -7,14 +7,11 @@ export function AddArticle() {
     const [openSuccess, setOpenSuccess] = useState(false)
 
     const handleSubmit = () => {
-        let url_q = new URLSearchParams()
-        url_q.set("text", content)
-        let url = new URL(document.URL)
-        url.pathname = "/api/articles"
-        url.search = url_q.toString()
-        fetch(url, {
+        fetch("/api/articles", {
             method: "POST",
+            body: JSON.stringify(content)
         }).then(()=>{
+            setContent("")
             setOpenSuccess(true)
             setTimeout(()=>{
                 setOpenSuccess(false)
